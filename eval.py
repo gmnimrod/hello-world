@@ -32,7 +32,7 @@ def get_stats(i,lines):
     i+=1
     while (lines[i]!="\n" and i<len(lines)):
         tmp = lines[i].rstrip().split("\t")
-        key = tmp[0]
+        key = tmp[2]
         val = tmp[1:]
         stats_dicts[curr_ngram][key] = Stats(key.split(" ")[:-1])
         stats_dicts[curr_ngram][key].rebuild_stats(val[0], val[7],val[2])

@@ -35,7 +35,7 @@ def get_stats(i,lines):
         key = tmp[0]
         val = tmp[1:]
         stats_dicts[curr_ngram][key] = Stats(key.split(" ")[:-1])
-        stats_dicts[curr_ngram][key].rebuild_stats(val[0], val[1],val[2])
+        stats_dicts[curr_ngram][key].rebuild_stats(val[0], val[7],val[2])
         i+=1
     i+=1
     return  i
